@@ -1,7 +1,7 @@
 import express from "express";
-import { protect, admin } from "../middleware/auth";
-import User from "../models/User";
-import Blog from "../models/Blog";
+import { protect, admin } from "../middleware/auth.js";
+import User from "../models/User.js";
+import Blog from "../models/Blog.js";
 
 const router = express.Router();
 
@@ -23,4 +23,4 @@ router.delete("/user/:id", protect, admin, async (req, res) => {
   }
 });
 
-export default router
+export default router;

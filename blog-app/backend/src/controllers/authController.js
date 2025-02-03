@@ -3,7 +3,7 @@ import jwt from "jsonwebtoken";
 import User from "../models/User.js";
 
 // register controller
-export const registerUser = async (req, res) => {
+const registerUser = async (req, res) => {
   const { name, email, password } = req.body;
 
   try {
@@ -66,4 +66,4 @@ const loginUser = async (req, res) => {
   }
 };
 
-export default { registerUser, loginUser };
+export { registerUser, loginUser };
